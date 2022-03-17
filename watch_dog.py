@@ -1,7 +1,5 @@
 import subprocess
 from keyboard import add_hotkey, wait
-from sys import argv
-import codecs
 
 disk_list = []
 label = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S',
@@ -25,8 +23,6 @@ def check_usb():
                 if i != 'C' and i != 'D':
                     disk_list.append(i)
 
-    disk_list.append('F')
-    disk_list.append('G')
     str_disk_list = ''.join(disk_list)
     open_window(str_disk_list)
     disk_list.clear()

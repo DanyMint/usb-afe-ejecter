@@ -1,7 +1,5 @@
 from tkinter import *
 import subprocess
-import codecs
-from time import sleep
 from sys import argv
 
 disk_list = []
@@ -72,4 +70,6 @@ list_box.focus_set()
 list_box.bind('<space>', get_disk_name)
 
 root.mainloop()
-subprocess.run(['python', 'eject.py', f'{usb_for_eject[0]}'], shell=True)
+
+if usb_for_eject:
+    subprocess.run(['python', 'eject.py', f'{usb_for_eject[0]}'], shell=True)

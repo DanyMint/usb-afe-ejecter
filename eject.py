@@ -13,7 +13,7 @@ def eject_usb(selected_usb):
     process = subprocess.run(['powershell.exe', '-ExecutionPolicy', 'Unrestricted', './tmp.ps1'])
     if process.returncode == 0:
         mixer.init()
-        mixer.music.load('WindowsNotifySystemGeneric.wav')
+        mixer.music.load('eject_sound.wav')
         mixer.music.play(loops=1)
 
 
