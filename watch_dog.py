@@ -13,15 +13,12 @@ def open_window(disk_list):
 def check_usb():
     for i in label:
         try:
-            file = open(i + ':/')
+            open(i + ':/', 'r')
         except Exception as e:
-            '''
-            error = 2  =>not found
-            error = 13 =>permission denied (exist!)
-            '''
-            if (e.errno == 13):
-                if i != 'C' and i != 'D':
-                    disk_list.append(i)
+            # error = 2  =>not found
+            # error = 13 =>permission denied (exist!)
+            if e.errno == 13 and i not in ['C', 'D']:
+                disk_list.append(i)
 
     str_disk_list = ''.join(disk_list)
     open_window(str_disk_list)
