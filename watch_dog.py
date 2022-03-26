@@ -26,7 +26,7 @@ def check_usb():
 
 
 def main():
-    add_hotkey('Alt + f1', check_usb)
+    add_hotkey('Ctrl + Alt + Shift + E', check_usb)
     wait()
 
 

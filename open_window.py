@@ -3,12 +3,7 @@ import subprocess
 from sys import argv
 from pygame import mixer
 
-disk_list = []
-disks = argv[-1]
-
-for i in disks:
-    disk_list.append(i)
-
+disk_list = list(argv[-1])
 usb_for_eject = []
 
 root = Tk()
@@ -37,7 +32,7 @@ frame.config(bg="#fff")
 font_size = 30
 text = "Select USB drive and double spacebar:"
 
-label = Label(frame, text=text, wraplength=screen_width * 0.8)
+label = Label(frame, text=text, wraplength=screen_width * 0.5)
 label.pack(side=TOP, expand=YES)
 label.config(bg="#fff", justify=CENTER, font=("calibri", font_size))
 
@@ -60,14 +55,13 @@ def get_disk_name(event):
 
 root.bind('<Escape>', destroy_window)
 
-list_box = Listbox(width=(int(screen_width * 0.5)), height=(int(screen_height * 0.5)))
+list_box = Listbox(width=int(screen_width * 0.3), height=int(screen_height * 0.5), font=("calibri", font_size))
 
 for el in disk_list:
     list_box.insert(0, el)
 
 list_box.pack()
 list_box.focus_set()
-
 list_box.bind('<space>', get_disk_name)
 
 root.mainloop()
