@@ -6,7 +6,7 @@ Written in Python.
 
 # Installation and run:
 - Install [python](https://www.python.org/downloads/release/python-390/).
-- Download the app archive from [Github](https://github.com/igrowing/usb-safe-ejecter/archive/refs/heads/main.zip).
+- Download the app archive from [Github](https://github.com/DanyMint/usb-safe-ejecter/archive/refs/heads/main.zip).
 - Unpack the app into desired folder.
 - Run `USB ejector.lnk`. It runs hidden -> just try `Ctrl+Shift+Alt+E` ;-)
 
