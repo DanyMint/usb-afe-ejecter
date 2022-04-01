@@ -1,12 +1,21 @@
 # usb-safe-ejecter
-It's small program eject USB by hotkey on python
+It's small program to eject USB safely by `Ctrl+Shift+Alt+E` hotkey.
+Although Windows default is `Safe removal enabled` for USB drives, the Flash is still damaged after writing into it.
+Ejecting with mouse is annoying if used frequently.
+Written in Python.
 
-One day my Flash card broke. I hadn't understand reason of usbs broke but I decided create program wich wil safe eject usb card by hotkey. `Alt+f1`.
+# Installation and run:
+- Install [python](https://www.python.org/downloads/release/python-390/).
+- Download the app archive from [Github](https://github.com/igrowing/usb-safe-ejecter/archive/refs/heads/main.zip).
+- Unpack the app into desired folder.
+- Run `USB ejector.lnk`. It runs hidden -> just try `Ctrl+Shift+Alt+E` ;-)
+- 
 
-⌨️ Hotkeys:
-- `Alt+f1` open window with all card which connect to PC.
+# ⌨️ Usage Hotkeys:
+- `Alt + F1` open window with all card which connect to PC.
+- Select the drive with up/down arrow keys. `Esc` to abort.
 - `double tap space` select usb card for eject. 
 
-⚠️ Problems
-- Today program work only on Windows.
+# ⚠️ Known Issues
+- Today program runs only on Windows.
 - for select usb need tap to key twice  
