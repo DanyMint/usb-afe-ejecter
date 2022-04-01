@@ -1,6 +1,12 @@
 import subprocess
 from keyboard import add_hotkey, wait
+import json
 
+with open('config.json', 'r') as config_file:
+    config = json.load(config_file)
+
+
+open_window_hotkey = config['openWindowHotkey']
 disk_list = []
 label = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S',
          'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -26,7 +32,7 @@ def check_usb():
 
 
 def main():
-    add_hotkey('Ctrl + Alt + Shift + E', check_usb)
+    add_hotkey(open_window_hotkey, check_usb)
     wait()
 
 

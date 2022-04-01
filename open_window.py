@@ -2,6 +2,7 @@ from tkinter import *
 import subprocess
 from sys import argv
 from pygame import mixer
+from watch_dog import config
 
 disk_list = list(argv[-1])
 usb_for_eject = []
@@ -29,7 +30,7 @@ frame.master.overrideredirect(True)  # Set no border or title
 frame.config(bg="#fff")
 
 # Create text label
-font_size = 30
+font_size = config['ui']['fontSize']
 text = "Select USB drive and double spacebar:"
 
 label = Label(frame, text=text, wraplength=screen_width * 0.5)
@@ -76,4 +77,3 @@ if usb_for_eject:
         mixer.init()
         mixer.music.load('eject_sound.wav')
         mixer.music.play(loops=1)
-
