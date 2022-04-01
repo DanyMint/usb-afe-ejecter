@@ -9,10 +9,10 @@ Written in Python.
 - Download the app archive from [Github](https://github.com/igrowing/usb-safe-ejecter/archive/refs/heads/main.zip).
 - Unpack the app into desired folder.
 - Run `USB ejector.lnk`. It runs hidden -> just try `Ctrl+Shift+Alt+E` ;-)
-- 
+
 
 # ⌨️ Usage Hotkeys:
-- `Alt + F1` open window with all card which connect to PC.
+- `Ctrl+Shift+Alt+E` open window with all card which connect to PC.
 - Select the drive with up/down arrow keys. `Esc` to abort.
 - `double tap space` select usb card for eject. 
 
